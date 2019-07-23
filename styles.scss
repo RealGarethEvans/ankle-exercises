@@ -1,6 +1,6 @@
  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
  
- $arrow-box-size: 25vw;
+ $arrow-box-size: 25;
 
 body{
     font-family: "Open Sans";
@@ -13,32 +13,77 @@ h1{
 }
 .instructions{
     input{
-        font-size: 4vw;
+        font-size: inherit;
         width: 2em;
     }
 }
 
 #stop-go-button{
     font-size: 8vw;
+    background-color: lightGrey;
 }
 
 .arrows{
-    width: 90%;
-    margin: 5vw auto;
     text-align: center;
     font-size: 0; // to fix the whitespace issue
 }
 
 .arrow{
     display: inline-block;
-    width: $arrow-box-size;
-    height: $arrow-box-size;
-    border-radius: 5px;
-    font-size: 16vw;
-    &.left{
-        margin-right: 12.5vw;
+    &.corner i{
+        transform: rotateZ(45deg)
     }
-    &.right{
-        margin-left: 12.5vw;
+}
+
+@media (orientation:portrait){
+    .arrows{
+        width: 90vw;
+        height: 90vw;
+        margin: 5vw auto;
+    }
+    .arrow{
+        font-size: 16vw;
+        width: $arrow-box-size + vw;
+        height: $arrow-box-size + vw;
+        &.left{
+            margin-right: 12.5vw;
+        }
+        &.right{
+            margin-left: 12.5vw;
+        }
+    }
+}
+@media (orientation:landscape){
+    body{
+        display: flex;
+        font-size: 3vw;
+    }
+    .text{
+        width: 24vw;
+    }
+    h1{
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
+    p{
+        margin: 0;
+    }
+    .arrows{
+        display: inline-block;
+        width: 75vw;
+        min-width: 75vw;
+        height: 75vw;
+        margin: 5vh auto;
+    }
+    .arrow{
+        font-size: 16vh;
+        width: $arrow-box-size + vh;
+        height: $arrow-box-size + vh;
+        &.left{
+            margin-right: 12.5vh;
+        }
+        &.right{
+            margin-left: 12.5vh;
+        }
     }
 }

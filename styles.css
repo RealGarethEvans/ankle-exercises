@@ -8,27 +8,65 @@ h1 {
   font-size: 10vw; }
 
 .instructions input {
-  font-size: 4vw;
+  font-size: inherit;
   width: 2em; }
 
 #stop-go-button {
-  font-size: 8vw; }
+  font-size: 8vw;
+  background-color: lightGrey; }
 
 .arrows {
-  width: 90%;
-  margin: 5vw auto;
   text-align: center;
   font-size: 0; }
 
 .arrow {
-  display: inline-block;
-  width: 25vw;
-  height: 25vw;
-  border-radius: 5px;
-  font-size: 16vw; }
-  .arrow.left {
-    margin-right: 12.5vw; }
-  .arrow.right {
-    margin-left: 12.5vw; }
+  display: inline-block; }
+  .arrow.corner i {
+    transform: rotateZ(45deg); }
+
+@media (orientation: portrait) {
+  .arrows {
+    width: 90vw;
+    height: 90vw;
+    margin: 5vw auto; }
+
+  .arrow {
+    font-size: 16vw;
+    width: 25vw;
+    height: 25vw; }
+    .arrow.left {
+      margin-right: 12.5vw; }
+    .arrow.right {
+      margin-left: 12.5vw; } }
+@media (orientation: landscape) {
+  body {
+    display: flex;
+    font-size: 3vw; }
+
+  .text {
+    width: 24vw; }
+
+  h1 {
+    font-size: 5vw;
+    margin-bottom: 0; }
+
+  p {
+    margin: 0; }
+
+  .arrows {
+    display: inline-block;
+    width: 75vw;
+    min-width: 75vw;
+    height: 75vw;
+    margin: 5vh auto; }
+
+  .arrow {
+    font-size: 16vh;
+    width: 25vh;
+    height: 25vh; }
+    .arrow.left {
+      margin-right: 12.5vh; }
+    .arrow.right {
+      margin-left: 12.5vh; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -42,9 +42,9 @@ function nextStep(){
     const possibleSteps = 8;
     let step = Math.ceil(Math.random() * possibleSteps);
     let arrowToUse = $('.arrow.' + step);
-    arrowToUse.prop('style', "background-color:red");
+    soundFiles[step - 1][0].play();
+    arrowToUse.prop('style', "background-color:lightGrey");
     setTimeout(function(){
         arrowToUse.prop('style', "background-color:white");
-    }, 200);
-    soundFiles[step - 1][0].play();
+    }, 1000);
 }

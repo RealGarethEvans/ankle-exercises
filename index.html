@@ -6,21 +6,31 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="functions.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <h1>Ankle exercises</h1>
-        <p class="instructions">Give me a step every <input type="number" id="pause-length" value="1.5" /> seconds</p>
-        <input type="button" id="stop-go-button" value="GO!" />
+        <div class="text">
+            <h1>Ankle exercises</h1>
+            <p class="instructions">Give me a step every <input type="number" id="pause-length" value="1.5" /> seconds</p>
+            <input type="button" id="stop-go-button" value="GO!" />
+        </div>
         <div class="arrows">
-            <div class="arrow 1">↖</div>
-            <div class="arrow 2">↑</div>
-            <div class="arrow 3">↗</div>
-            <div class="arrow 4 left">←</div>
-            <div class="arrow 5 right">→</div>
-            <div class="arrow 6">↙</div>
-            <div class="arrow 7">↓</div>
-            <div class="arrow 8">↘</div>
+            <div>
+                <div class="arrow 1 corner"><i class="fa fa-arrow-left"></i></div>
+                <div class="arrow 2"><i class="fa fa-arrow-up"></i></div>
+                <div class="arrow 3 corner"><i class="fa fa-arrow-up"></i></div>
+            </div>
+            <div>
+                <div class="arrow 4 left"><i class="fa fa-arrow-left"></i></div>
+                <div class="arrow 5 right"><i class="fa fa-arrow-right"></i></div>
+            </div>
+            <div>
+                <div class="arrow 6 corner"><i class="fa fa-arrow-down"></i></div>
+                <div class="arrow 7"><i class="fa fa-arrow-down"></i></div>
+                <div class="arrow 8 corner"><i class="fa fa-arrow-right"></i></div>
+            </div>
         </div>
     </body>
 </html>
