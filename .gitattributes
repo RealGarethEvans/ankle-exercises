@@ -1,2 +1,2 @@
 *.sh linguist-detectable=false
-*html. linguist-detectable=false
+*.html linguist-detectable=false
